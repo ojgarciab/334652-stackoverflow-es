@@ -1,0 +1,280 @@
+/* GENERAL */      
+      
+::-moz-selection {
+  color: white;
+  background: #8d33ff;;
+}
+
+::selection {
+  color: white;
+  background: #8d33ff;;
+}
+
+body {
+	font-family: Verdana;
+	width: 100%;
+	height: 100%;
+    background-image: url(../imagenes/lateral.jpg);
+    background-size: auto;
+    background-repeat: space;
+}
+
+/* ESTRUCTURA */
+
+.flex-container {
+  display: flex;
+  align-items: stretch;
+  background-color: none;
+}
+
+.flex-container > div {
+  background-color: none;
+  color: black;
+  width: 100px;
+  margin: 5px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 15px;
+}
+
+.portada{
+  background-image: url(./imagenes/portada_debian.png), url(./imagenes/portada_linux.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left, right;
+  width: 100%;
+  height: 150px;
+  margin: 5px;
+}
+
+.contenido {
+	background-color: none;
+	float: left;
+	width: 100%;
+	padding: 15px;
+	margin-top: 7px;
+	text-align: center;
+}
+
+/* MENÚ */
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  float: left;
+	text-align: center;
+  margin: 5px;
+}
+
+.navbar a {
+  float: left;
+  padding: 14px 16px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+
+  
+/* TEXTO LATERAL */
+
+.lateral {
+  background-image: url(../imagenes/lateral.jpg);
+  background-size: 100px 80px;
+}
+
+/* MOMENTOS INOLVIDABLES */
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+/* GRID */
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.column img {
+  margin-top: 12px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* TEXTO EN IMÁGENES */
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+/* ESTRUCTURA IMÁGENES */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(var(--columnas), 1fr);
+  width: calc(100% - 20px);
+  max-width: 1200px;
+  gap: 10px;
+}
+
+.grid__item {
+  padding-top: 85%;
+  position: relative;
+  border: 1px solid;
+}
+
+.grid__img {
+  --object-fit: cover;
+  --object-position: center center;
+  display: block;
+  top: 0;
+  bottom: 0;
+  object-fit: var(--object-fit);
+  object-position: var(--object-position);
+  height: 100%;
+  width: 100%;
+}
+
+.grid__img,
+.caption {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .grid {
+    --columnas: 3;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width:599px) {
+  .grid {
+    --columnas: 2;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .grid {
+    --columnas: 1;
+  }
+}
+
+.caption {
+  background-color: rgba(255, 255, 255, 0.5);
+  top: auto;
+  bottom: 0;
+  min-height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  max-height: 100%;
+}
+
+.limpiar {
+  clear: both;
+}
+
+/* ICONOS */
+
+.material-icons{
+  font-size: 24px;
+  color: white;
+  vertical-align: middle;
+}
+
+/* IMÁGENES */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+div.img {
+  border: 1px solid #ccc;
+  background-color: white;
+  overflow: hidden;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+/* IMAGEN HERO */
+.hero-image {
+  background-image: url("https://dam.ngenespanol.com/wp-content/uploads/2019/10/perros-personalidad-2.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.peque {
+    font-size: 10px;
+}
